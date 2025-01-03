@@ -1,0 +1,37 @@
+{
+  "name": "enigma-env",
+  "version": "1.0.0",
+  "description": "Encrypt/decrypt environment variables stored on disk",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=DEV node --watch index.js",
+    "encrypt": "cross-env NODE_ENV=DEV node index.js --encrypt",
+    "test": "NODE_ENV=test node --env-file=.env --watch --test ./test/*.test.js"
+  },
+  "bin": {
+    "enigma-env": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miketerry-org/enigma-env.git"
+  },
+  "keywords": [
+    "enigma",
+    "environment",
+    "variables",
+    ".env",
+    "encrypted",
+    "encryption",
+    "crypto",
+    "aes"
+  ],
+  "author": "miketerry.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miketerry-org/enigma-env/issues"
+  },
+  "homepage": "https://github.com/miketerry-org/enigma-env#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

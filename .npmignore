@@ -1,0 +1,12 @@
+.ds_store
+.env
+.git
+.gitignore
+.npmignore
+docs/
+env-Secret-key.txt
+node_modules/
+package-lock.json
+Secure.env
+test/
+Todo.md
