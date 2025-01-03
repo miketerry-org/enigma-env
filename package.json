@@ -1,6 +1,6 @@
 {
   "name": "enigma-env",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Encrypt/decrypt environment variables stored on disk",
   "main": "index.js",
   "scripts": {
