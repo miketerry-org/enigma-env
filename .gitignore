@@ -2,11 +2,6 @@
 .enigma.env
 .env
 .git
-.gitignore
-.npmignore
-docs/
 enigma-env-key.txt
-node_modules/
+node_modules
 package-lock.json
-test/
-Todo.md
