@@ -35,7 +35,7 @@ or
 node server.js --encrypt
 ```
 
-depending on the name of you main source file.
+depending on the name of your main source file.
 
 This will generate a new encryption key, save it to the "enigma-env-key.txt" file and halt the process displaying a success message.
 
@@ -83,7 +83,7 @@ require("enigma-env").run();
 
 ###function makeEncryptKey()
 
-This function generates a new 256-bit (32 bytes) random encryption key, encodes it in Base64, and saves it to the "enigma-env-key.txt" file. It returns the generated encryption key as a Buffer. 
+This function generates a new 256-bit (32 bytes) random encryption key, encodes it in Base64, and saves it to the "enigma-env-key.txt" file. It returns the generated encryption key as a Buffer.
 
 In normal use of this package, you should have no need to use this function.
 
