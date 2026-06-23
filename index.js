@@ -16,11 +16,11 @@ const dotenv = require("dotenv");
 // Constants
 // =========================
 
-const FORMAT_VERSION = "ENIGMA_ENV_V2";
+const FORMAT_VERSION = "ENIGMA_ENV_V3";
 
 const unencryptedFilename = ".env";
-const encryptedFilename = ".enigma.env";
-const keyFilename = "enigma-env-key.txt";
+const encryptedFilename = ".env.enigma";
+const keyFilename = ".env.enigma-key";
 const keyVarName = "ENIGMA_ENV_KEY";
 
 const KEY_LENGTH = 32; // 256-bit
