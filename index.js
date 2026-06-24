@@ -24,7 +24,7 @@ const keyFilename = ".env.enigma-key";
 const keyVarName = "ENIGMA_ENV_KEY";
 
 const KEY_LENGTH = 32; // 256-bit
-const IV_LENGTH = 12;  // recommended for GCM
+const IV_LENGTH = 12; // recommended for GCM
 
 // =========================
 // Utils
@@ -115,19 +115,18 @@ function encryptEnvFile(force = false) {
 
   const authTag = cipher.getAuthTag().toString("base64");
 
-  const output =
-    [
-      FORMAT_VERSION,
-      iv.toString("base64"),
-      authTag,
-      encrypted
-    ].join("\n");
+  const output = [
+    FORMAT_VERSION,
+    iv.toString("base64"),
+    authTag,
+    encrypted,
+  ].join("\n");
 
   writeFileSecure(encryptedFilename, output);
 
   return {
     encryptedFile: encryptedFilename,
-    keyFile: keyFilename
+    keyFile: keyFilename,
   };
 }
 
@@ -193,7 +192,8 @@ async function run(options = {}) {
         console.log("Key saved:", result.keyFile);
       }
 
-      return result;
+      // always exit program after encryption
+      process.exit(0);
     }
 
     if (verbose) console.log("Decrypting .enigma.env...");
@@ -235,5 +235,5 @@ module.exports = {
   loadEncryptKey,
   encryptEnvFile,
   decryptEnvFile,
-  run
+  run,
 };
